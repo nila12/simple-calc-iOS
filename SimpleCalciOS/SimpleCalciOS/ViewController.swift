@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //MARK: Properties
+    @IBOutlet weak var Zero: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    //MARK: Actions
+    @IBAction func zeroPressed(_ sender: UIButton) {
+    }
 
 }
 
