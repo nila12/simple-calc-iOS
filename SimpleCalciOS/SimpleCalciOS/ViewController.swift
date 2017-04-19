@@ -6,15 +6,13 @@
 //  Copyright © 2017 Mathi Manavalan. All rights reserved.
 //
 
+// EXTRA CREDIT: Supports decimal operations
+
 import UIKit
 
 class ViewController: UIViewController {
     
     //MARK: Properties
-    
-    //@IBOutlet weak var Zero: UIButton!
-    // when do i need this type of reference???
-    
     @IBOutlet weak var DisplayArea: UILabel!
     
     public var text = ""
@@ -128,6 +126,72 @@ class ViewController: UIViewController {
     
     @IBAction func equalsPressed(_ sender: UIButton) {
         // display solution to user input
+        
+        var inputsArr : Array = text.components(separatedBy: " ")
+        
+        let first = Double(inputsArr[0])
+        let oper = String(inputsArr[1])!
+        let sec = Double(inputsArr[2])
+        
+        switch oper {
+            case "+":
+                text = String(first! + sec!)
+                DisplayArea.text = text
+            
+            case "-":
+                text = String(first! - sec!)
+                DisplayArea.text = text
+            
+            case "/":
+                text = String(first! / sec!)
+                DisplayArea.text = text
+            
+            case "*":
+                text = String(first! * sec!)
+                DisplayArea.text = text
+            
+            case "mod":
+                text = "\(first!.truncatingRemainder(dividingBy: sec!))"
+                DisplayArea.text = text
+            
+            case "count":
+                inputsArr = text.components(separatedBy: " count ")
+                text = "\(inputsArr.count)"
+                DisplayArea.text = text
+            
+            case "avg":
+                inputsArr = text.components(separatedBy: " avg ")
+                
+                var sum = 0.0
+            
+                for num in inputsArr {
+                    sum += Double(num)!
+                }
+            
+                text = "\(sum / Double(inputsArr.count))"
+                DisplayArea.text = text
+            
+            case "fact":
+                var sum = 1
+        
+                for index in 2...Int(inputsArr[0])! {
+                    sum *= index
+                }
+        
+                text = "\(sum)"
+                DisplayArea.text = text
+        
+            
+            default:
+                text = "Invalid operation inputted"
+                DisplayArea.text = text
+        }
+    }
+    
+    @IBAction func clearPressed(_ sender: UIButton) {
+        
+        text = ""
+        DisplayArea.text = "Cleared"
     }
     
 }
