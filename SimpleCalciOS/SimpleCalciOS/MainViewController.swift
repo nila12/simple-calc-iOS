@@ -194,5 +194,10 @@ class ViewController: UIViewController {
         DisplayArea.text = "Cleared"
     }
     
+    @IBAction func historyPressed(_ sender: Any) {
+        
+    }
+    
+    
 }
 

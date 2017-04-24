@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E38290B1EA5BBE000ECD259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38290A1EA5BBE000ECD259 /* AppDelegate.swift */; };
-		0E38290D1EA5BBE000ECD259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38290C1EA5BBE000ECD259 /* ViewController.swift */; };
+		0E38290D1EA5BBE000ECD259 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38290C1EA5BBE000ECD259 /* MainViewController.swift */; };
 		0E3829101EA5BBE000ECD259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E38290E1EA5BBE000ECD259 /* Main.storyboard */; };
 		0E3829121EA5BBE000ECD259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E3829111EA5BBE000ECD259 /* Assets.xcassets */; };
 		0E3829151EA5BBE000ECD259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3829131EA5BBE000ECD259 /* LaunchScreen.storyboard */; };
 		0E3829201EA5BBE000ECD259 /* SimpleCalciOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38291F1EA5BBE000ECD259 /* SimpleCalciOSTests.swift */; };
 		0E38292B1EA5BBE000ECD259 /* SimpleCalciOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38292A1EA5BBE000ECD259 /* SimpleCalciOSUITests.swift */; };
+		0E8ED4871EAD9BC1007CE2C5 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8ED4861EAD9BC1007CE2C5 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		0E3829071EA5BBE000ECD259 /* SimpleCalciOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleCalciOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E38290A1EA5BBE000ECD259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E38290C1EA5BBE000ECD259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0E38290C1EA5BBE000ECD259 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0E38290F1EA5BBE000ECD259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E3829111EA5BBE000ECD259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E3829141EA5BBE000ECD259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		0E3829261EA5BBE000ECD259 /* SimpleCalciOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleCalciOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E38292A1EA5BBE000ECD259 /* SimpleCalciOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalciOSUITests.swift; sourceTree = "<group>"; };
 		0E38292C1EA5BBE000ECD259 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E8ED4861EAD9BC1007CE2C5 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +100,12 @@
 			isa = PBXGroup;
 			children = (
 				0E38290A1EA5BBE000ECD259 /* AppDelegate.swift */,
-				0E38290C1EA5BBE000ECD259 /* ViewController.swift */,
+				0E38290C1EA5BBE000ECD259 /* MainViewController.swift */,
 				0E38290E1EA5BBE000ECD259 /* Main.storyboard */,
 				0E3829111EA5BBE000ECD259 /* Assets.xcassets */,
 				0E3829131EA5BBE000ECD259 /* LaunchScreen.storyboard */,
 				0E3829161EA5BBE000ECD259 /* Info.plist */,
+				0E8ED4861EAD9BC1007CE2C5 /* HistoryViewController.swift */,
 			);
 			path = SimpleCalciOS;
 			sourceTree = "<group>";
@@ -259,7 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E38290D1EA5BBE000ECD259 /* ViewController.swift in Sources */,
+				0E8ED4871EAD9BC1007CE2C5 /* HistoryViewController.swift in Sources */,
+				0E38290D1EA5BBE000ECD259 /* MainViewController.swift in Sources */,
 				0E38290B1EA5BBE000ECD259 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,6 +509,7 @@
 				0E3829311EA5BBE000ECD259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E3829321EA5BBE000ECD259 /* Build configuration list for PBXNativeTarget "SimpleCalciOSTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				0E3829341EA5BBE000ECD259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E3829351EA5BBE000ECD259 /* Build configuration list for PBXNativeTarget "SimpleCalciOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				0E3829371EA5BBE000ECD259 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
