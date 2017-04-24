@@ -228,8 +228,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="History"/>
                                 <connections>
-                                    <action selector="historyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KCR-b4-oIP"/>
-                                    <segue destination="fvh-L8-RRK" kind="show" id="V3n-NC-zyY"/>
+                                    <action selector="historyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acW-sQ-16d"/>
+                                    <segue destination="fvh-L8-RRK" kind="show" identifier="go" id="V3n-NC-zyY"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -254,7 +254,7 @@
         <!--View Controller History-->
         <scene sceneID="5Hf-Lf-Ztk">
             <objects>
-                <viewController id="fvh-L8-RRK" userLabel="View Controller History" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="fvh-L8-RRK" userLabel="View Controller History" customClass="HistoryViewController" customModule="SimpleCalciOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D2n-fD-ZoV"/>
                         <viewControllerLayoutGuide type="bottom" id="BaC-8V-Pkm"/>
@@ -271,13 +271,30 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="VKg-pJ-9fr"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-0V-MfL">
+                                <rect key="frame" x="67" y="93" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sx-9e-Neo">
+                                        <rect key="frame" x="8" y="8" width="100" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="HistoryLabel" destination="1Sx-9e-Neo" id="8Zt-bO-zJk"/>
+                        <outlet property="HistoryScroll" destination="T9C-0V-MfL" id="psc-3G-D73"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xHl-WN-Tzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="139"/>
+            <point key="canvasLocation" x="909.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

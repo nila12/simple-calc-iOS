@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     
     //MARK: Properties
     @IBOutlet weak var DisplayArea: UILabel!
-    
     public var text = ""
+    
+    public var equalsText = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +130,8 @@ class ViewController: UIViewController {
         
         var inputsArr : Array = text.components(separatedBy: " ")
         
+        equalsText = text + " = "
+        
         let first = Double(inputsArr[0])
         let oper = String(inputsArr[1])!
         let sec = Double(inputsArr[2])
@@ -137,27 +140,33 @@ class ViewController: UIViewController {
             case "+":
                 text = String(first! + sec!)
                 DisplayArea.text = text
+                equalsText += text
             
             case "-":
                 text = String(first! - sec!)
                 DisplayArea.text = text
+                equalsText += text
             
             case "/":
                 text = String(first! / sec!)
                 DisplayArea.text = text
+                equalsText += text
             
             case "*":
                 text = String(first! * sec!)
                 DisplayArea.text = text
+                equalsText += text
             
             case "mod":
                 text = "\(first!.truncatingRemainder(dividingBy: sec!))"
                 DisplayArea.text = text
+                equalsText += text
             
             case "count":
                 inputsArr = text.components(separatedBy: " count ")
                 text = "\(inputsArr.count)"
                 DisplayArea.text = text
+                equalsText += text
             
             case "avg":
                 inputsArr = text.components(separatedBy: " avg ")
@@ -170,6 +179,7 @@ class ViewController: UIViewController {
             
                 text = "\(sum / Double(inputsArr.count))"
                 DisplayArea.text = text
+                equalsText += text
             
             case "fact":
                 var sum = 1
@@ -180,6 +190,7 @@ class ViewController: UIViewController {
         
                 text = "\(sum)"
                 DisplayArea.text = text
+                equalsText += text
         
             
             default:
@@ -194,9 +205,19 @@ class ViewController: UIViewController {
         DisplayArea.text = "Cleared"
     }
     
-    @IBAction func historyPressed(_ sender: Any) {
+    @IBAction func historyPressed(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "go", sender: self)
+        
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let histVC = segue.destination as! HistoryViewController
+        
+        histVC.hist = equalsText
+    }
+    
     
     
 }

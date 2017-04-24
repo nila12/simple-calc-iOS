@@ -9,17 +9,26 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var HistoryScroll: UIScrollView!
+    @IBOutlet weak var HistoryLabel: UILabel!
+    
+    var hist = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        HistoryLabel.text = hist
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*
@@ -31,5 +40,7 @@ class HistoryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
