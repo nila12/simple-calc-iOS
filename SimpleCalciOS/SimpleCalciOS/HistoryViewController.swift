@@ -15,6 +15,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var HistoryLabel: UILabel!
     
     var hist = ""
+    var currentLabelYPosition : CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,18 @@ class HistoryViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         HistoryLabel.text = hist
+        
+        
+        
+        let newlabel = UILabel(frame: CGRect(x: HistoryScroll.frame.origin.x, y: currentLabelYPosition, width: 200, height: 21))
+        //newlabel.center = CGPoint(x: 160, y: 285)
+        newlabel.textAlignment = .center
+        newlabel.text = "test label!"
+        
+        
+        self.HistoryScroll.addSubview(newlabel)
+        currentLabelYPosition += newlabel.frame.size.height
+        
     }
 
     override func didReceiveMemoryWarning() {
