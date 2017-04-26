@@ -264,22 +264,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGc-iI-74L">
-                                <rect key="frame" x="42" y="525" width="172" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGc-iI-74L">
+                                <rect key="frame" x="36" y="607" width="172" height="30"/>
                                 <state key="normal" title="Go back to the calculator"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VKg-pJ-9fr"/>
+                                    <action selector="GoBackPressed:" destination="fvh-L8-RRK" eventType="touchUpInside" id="Uen-wP-Shg"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="back" id="VKg-pJ-9fr"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-0V-MfL">
-                                <rect key="frame" x="67" y="40" width="240" height="607"/>
+                                <rect key="frame" x="67" y="40" width="240" height="557"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="T9C-0V-MfL" firstAttribute="top" secondItem="D2n-fD-ZoV" secondAttribute="bottom" constant="20" id="Ak1-h6-K5c"/>
-                            <constraint firstAttribute="bottom" secondItem="T9C-0V-MfL" secondAttribute="bottom" constant="20" id="hYo-6g-hsc"/>
+                            <constraint firstItem="BaC-8V-Pkm" firstAttribute="top" secondItem="tGc-iI-74L" secondAttribute="bottom" constant="30" id="hSJ-sI-1re"/>
+                            <constraint firstAttribute="bottom" secondItem="T9C-0V-MfL" secondAttribute="bottom" constant="70" id="hYo-6g-hsc"/>
+                            <constraint firstItem="tGc-iI-74L" firstAttribute="leading" secondItem="5QU-Bf-Jez" secondAttribute="leadingMargin" constant="20" id="iAI-L7-098"/>
                             <constraint firstItem="T9C-0V-MfL" firstAttribute="leading" secondItem="5QU-Bf-Jez" secondAttribute="leadingMargin" constant="51" id="s6b-6Z-m7D"/>
                             <constraint firstItem="T9C-0V-MfL" firstAttribute="centerX" secondItem="5QU-Bf-Jez" secondAttribute="centerX" id="y4s-aK-GYE"/>
                         </constraints>

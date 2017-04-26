@@ -201,8 +201,6 @@ class ViewController: UIViewController {
         }
         
         mainhistarr.append(equalsText)
-        //mainhistarr.append("\n")
-        
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
@@ -214,21 +212,15 @@ class ViewController: UIViewController {
     @IBAction func historyPressed(_ sender: UIButton) {
         
         performSegue(withIdentifier: "go", sender: self)
-        
-        
+    
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let histVC = segue.destination as! HistoryViewController
         
-        //histVC.hist = equalsText
-        
         histVC.histarr.append(contentsOf: mainhistarr)
         
-        //histVC.temp = mainhistarr.joined(separator: "\n")
     }
-    
-    
     
 }
 

@@ -10,28 +10,19 @@ import UIKit
 
 class HistoryViewController: UIViewController {
     
-    
     @IBOutlet weak var HistoryScroll: UIScrollView!
-    //@IBOutlet weak var HistoryLabel: UILabel!
     
-    //var hist = ""
-    //var temp = ""
     public var histarr = [String]()
-    
-    //var currentLabelYPosition : CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        HistoryScroll.backgroundColor = UIColor.orange
+        HistoryScroll.backgroundColor = UIColor.yellow
 
         // Do any additional setup after loading the view.
         
-        //HistoryLabel.text = hist
-        
         let newlabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 25))
-        newlabel.backgroundColor = UIColor.yellow
-        //newlabel.center = CGPoint(x: 160, y: 285)
+        newlabel.backgroundColor = UIColor.green
         
         newlabel.text = "History"
         newlabel.textAlignment = .center
@@ -41,7 +32,6 @@ class HistoryViewController: UIViewController {
         var nlY = 25
         
         for eq in histarr {
-            //newlabel.text!.append(eq)
             let nl = UILabel(frame: CGRect(x: 0, y: nlY, width: 200, height: 25))
             nl.text = eq
             nl.textAlignment = .center
@@ -49,9 +39,17 @@ class HistoryViewController: UIViewController {
             self.HistoryScroll.addSubview(nl)
             nlY = nlY + 25
         }
-
         
-        //currentLabelYPosition += newlabel.frame.size.height
+    }
+    
+    @IBAction func GoBackPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "back", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let mainVC = segue.destination as! ViewController
+        
+        mainVC.mainhistarr.append(contentsOf: histarr)
         
     }
 
