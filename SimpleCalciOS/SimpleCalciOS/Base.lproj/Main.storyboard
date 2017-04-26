@@ -273,36 +273,18 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9C-0V-MfL">
-                                <rect key="frame" x="67" y="60" width="240" height="161"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sx-9e-Neo">
-                                        <rect key="frame" x="8" y="8" width="100" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="xQH-7w-05W"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="1Sx-9e-Neo" firstAttribute="top" secondItem="T9C-0V-MfL" secondAttribute="topMargin" id="GeI-zA-hK5"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Sx-9e-Neo" secondAttribute="trailing" constant="132" id="TEB-Cy-IEl"/>
-                                    <constraint firstAttribute="bottom" secondItem="1Sx-9e-Neo" secondAttribute="bottom" constant="99" id="kHU-0l-s2R"/>
-                                    <constraint firstItem="1Sx-9e-Neo" firstAttribute="leading" secondItem="T9C-0V-MfL" secondAttribute="leadingMargin" id="xso-t5-yLZ"/>
-                                </constraints>
+                                <rect key="frame" x="67" y="40" width="240" height="607"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="T9C-0V-MfL" firstAttribute="top" secondItem="D2n-fD-ZoV" secondAttribute="bottom" constant="40" id="Ak1-h6-K5c"/>
-                            <constraint firstAttribute="bottom" secondItem="T9C-0V-MfL" secondAttribute="bottom" constant="446" id="hYo-6g-hsc"/>
+                            <constraint firstItem="T9C-0V-MfL" firstAttribute="top" secondItem="D2n-fD-ZoV" secondAttribute="bottom" constant="20" id="Ak1-h6-K5c"/>
+                            <constraint firstAttribute="bottom" secondItem="T9C-0V-MfL" secondAttribute="bottom" constant="20" id="hYo-6g-hsc"/>
                             <constraint firstItem="T9C-0V-MfL" firstAttribute="leading" secondItem="5QU-Bf-Jez" secondAttribute="leadingMargin" constant="51" id="s6b-6Z-m7D"/>
                             <constraint firstItem="T9C-0V-MfL" firstAttribute="centerX" secondItem="5QU-Bf-Jez" secondAttribute="centerX" id="y4s-aK-GYE"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="HistoryLabel" destination="1Sx-9e-Neo" id="8Zt-bO-zJk"/>
                         <outlet property="HistoryScroll" destination="T9C-0V-MfL" id="psc-3G-D73"/>
                     </connections>
                 </viewController>

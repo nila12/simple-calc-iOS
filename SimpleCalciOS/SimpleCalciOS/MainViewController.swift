@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     public var text = ""
     
     public var equalsText = ""
+    
+    public var mainhistarr: [String] = ["\n"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -197,6 +199,10 @@ class ViewController: UIViewController {
                 text = "Invalid operation inputted"
                 DisplayArea.text = text
         }
+        
+        mainhistarr.append(equalsText)
+        //mainhistarr.append("\n")
+        
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
@@ -215,7 +221,11 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let histVC = segue.destination as! HistoryViewController
         
-        histVC.hist = equalsText
+        //histVC.hist = equalsText
+        
+        histVC.histarr.append(contentsOf: mainhistarr)
+        
+        //histVC.temp = mainhistarr.joined(separator: "\n")
     }
     
     
