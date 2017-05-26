@@ -159,7 +159,7 @@ class ViewController: UIViewController {
                 DisplayArea.text = text
                 equalsText += text
             
-            case "mod":
+            case "%":
                 text = "\(first!.truncatingRemainder(dividingBy: sec!))"
                 DisplayArea.text = text
                 equalsText += text
